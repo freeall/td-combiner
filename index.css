@@ -1,0 +1,76 @@
+#board {
+	position: relative;
+	background-color: #5c99ac;
+	width: 500px;
+	height: 650px;
+	margin: 0 auto;
+	/*-webkit-transform: scale(1);
+	-webkit-transform-origin: 0 0;*/
+}
+#controls {
+	background-color: #a9aaab;
+}
+.space {
+	position: absolute;
+	border: 1px solid #ccc;
+	width: 48px;
+	height: 48px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+.empty {
+	background-color: #bdbebf;
+}
+.road {
+	background-color: gray;
+	width: 50px;
+	height: 50px;
+	border: none;
+}
+.tower.selected {
+	border-color: red;
+}
+.tower[data-level="1"] {
+	background-color: black;
+}
+.tower[data-level="2"] {
+	background-color: blue;
+}
+.tower[data-level="3"] {
+	background-color: purple;
+}
+.menu {
+	top: -51px;
+	left: -1px;
+	width: 30px;
+	height: 30px;
+	margin: 10px;
+	background-color: black;
+}
+.menu .line {
+	width: 1px;
+	height: 40px;
+	background-color: black;
+	margin: 25px auto 0 auto;
+}
+.menu .price {
+	font-size: 12px;
+	color: white;
+	padding: 7px 0 0 7px;
+	float: left;
+	cursor: default;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.bug {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	margin: 10px;
+	background-color: red;
+	transition: top 2s;
+	transition: left 2s;
+	-webkit-transition: left 2s;
+	-webkit-transition: top 2s;
+}
