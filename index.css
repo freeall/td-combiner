@@ -40,6 +40,16 @@
 .tower[data-level="3"] {
 	background-color: purple;
 }
+.bullet {
+	position: absolute;
+	margin: 20px;
+	width: 3px;
+	height: 3px;
+	background-color: brown;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.4s;
+	-webkit-transition-timing-function: linear;
+}
 .menu {
 	top: -51px;
 	left: -1px;
@@ -63,14 +73,30 @@
 	-webkit-user-select: none;
 	user-select: none;
 }
-.bug {
+.creep {
 	position: absolute;
-	width: 30px;
-	height: 30px;
-	margin: 10px;
-	background-color: red;
-	transition: top 2s;
-	transition: left 2s;
-	-webkit-transition: left 2s;
-	-webkit-transition: top 2s;
+	width: 0;
+	height: 0;
+	margin-top: 12px;
+	border-top: 25px solid red;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	-webkit-transition-property: all, top, left;
+	-webkit-transition-duration: 0.2s, 1s, 1s;
+	-webkit-transition-timing-function: linear, linear, linear;
+}
+.creep[data-energy="50"] {
+	border-top-color: green;
+}
+.creep.south {
+	-webkit-transform: rotate(0deg);
+}
+.creep.north {
+	-webkit-transform: rotate(180deg);
+}
+.creep.east {
+	-webkit-transform: rotate(-90deg);
+}
+.creep.west {
+	-webkit-transform: rotate(90deg);
 }
