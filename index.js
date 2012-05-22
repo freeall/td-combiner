@@ -120,7 +120,7 @@ $(function() {
 		};
 		createBullet();
 	}
-	var updateShooters = function() {
+	var checkShooters = function() {
 		$('.tower').each(function() {
 			var $tower = $(this);
 			var tX = $tower.attr('data-x');
@@ -176,7 +176,7 @@ $(function() {
 				'data-x': ROAD[currentPiece][0],
 				'data-y': ROAD[currentPiece][1]
 			});
-			updateShooters();
+			checkShooters();
 		};
 
 		$creep
